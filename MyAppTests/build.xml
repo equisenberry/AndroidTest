@@ -114,18 +114,27 @@
         name="test.runner"
         value="com.zutubi.android.junitreport.JUnitReportTestRunner" />
 
-    <mkdir dir="junit-results" />
+    <target
+        name="fetch-test-report"
+        depends="init-props" >
 
-    <exec
-        dir="junit-results"
-        executable="${adb}"
-        failonerror="true" >
+        <echo>
+			Downloading XML test report...
+        </echo>
 
-        <arg line="${adb.device.arg}" />
+        <mkdir dir="junit-results" />
 
-        <arg value="pull" />
+        <exec
+            dir="junit-results"
+            executable="${adb}"
+            failonerror="true" >
 
-        <arg value="/data/data/${tested.project.app.package}/files/junit-report.xml" />
-    </exec>
+            <arg line="${adb.device.arg}" />
+
+            <arg value="pull" />
+
+            <arg value="/data/data/${tested.project.app.package}/files/junit-report.xml" />
+        </exec>
+    </target>
 
 </project>
