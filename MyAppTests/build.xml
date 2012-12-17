@@ -114,26 +114,15 @@
         name="test.runner"
         value="com.zutubi.android.junitreport.JUnitReportTestRunner" />
 
-    <target
-        name="fetch-test-report">
-
-        <echo>
-			Downloading XML test report...
-        </echo>
-
-        <mkdir dir="junit-results" />
-
-        <exec
-            dir="junit-results"
-            executable="${adb}"
-            failonerror="true" >
-
-            <arg line="${adb.device.arg}" />
-
-            <arg value="pull" />
-
-            <arg value="/data/data/${tested.project.app.package}/files/junit-report.xml" />
-        </exec>
-    </target>
+    <target name="fetch-test-report">
+    <echo>Downloading XML test report...</echo>
+    <mkdir dir="${reports.dir}"/>
+    <exec executable="${adb}" failonerror="true">
+        <arg line="${adb.device.arg}"/>
+        <arg value="pull" />
+        <arg value="/data/data/${tested.manifest.package}/files/junit-report.xml" />
+        <arg value="${reports.dir}/junit-report.xml" />
+    </exec>
+</target>
 
 </project>

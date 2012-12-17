@@ -19,12 +19,10 @@
     "adb shell am instrument -w com.example.androidtest.tests/android.test.InstrumentationTestRunner"
     -->
     <instrumentation
-        android:name="android.test.InstrumentationTestRunner"
+        android:name="com.zutubi.android.junitreport.JUnitReportTestRunner"
         android:label="Tests for com.example.androidtest"
         android:targetPackage="com.example.androidtest" />
-    <instrumentation
-        android:name="com.zutubi.android.junitreport.JUnitReportTestRunner"
-        android:targetPackage="com.example.androidtest" />
+
     <uses-sdk
         android:minSdkVersion="3"
         android:targetSdkVersion="3" />
