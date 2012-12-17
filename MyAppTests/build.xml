@@ -115,8 +115,7 @@
         value="com.zutubi.android.junitreport.JUnitReportTestRunner" />
 
     <target
-        name="fetch-test-report"
-        depends="init-props" >
+        name="fetch-test-report">
 
         <echo>
 			Downloading XML test report...
