@@ -94,7 +94,7 @@
 	    <!-- lint -->
 	    <mkdir dir="${reports.dir}"/>
 	    <exec executable="${lint.script}">
-	    <arg value="--html"/>
+	    <arg value="--xml"/>
 	    <arg value="${lint.report}"/>
 	    <arg value="${source.dir}"/>
 	    </exec>
