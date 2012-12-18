@@ -90,13 +90,12 @@
 	
 	<property name="lint.script" value="${sdk.dir}/tools/lint"/>
 	<property name="lint.report" location="${reports.dir}/lint-report.xml"/>
-	<target name="lint">
+	<target name="lint.script">
 	    <!-- lint -->
 	    <mkdir dir="${reports.dir}"/>
 	    <exec executable="${lint.script}">
 	    <arg value="--xml"/>
 	    <arg value="${lint.report}"/>
-	    <arg value="${source.dir}"/>
 	    </exec>
 	</target>
 
