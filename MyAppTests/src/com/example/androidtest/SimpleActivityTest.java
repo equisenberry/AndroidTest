@@ -31,7 +31,7 @@ public class SimpleActivityTest extends ActivityInstrumentationTestCase2<SimpleA
 	}
 	
 	public void testAddValues2() {
-		assertTrue("Add result should be 98", mActivity.add(2, 3) == 6);
+		assertTrue("Add result should be 98", mActivity.add(3, 3) == 6);
 	}
 
 }
