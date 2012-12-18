@@ -87,5 +87,19 @@
 		<mkdir dir="${doc.dir}" />
 		<javadoc sourcepath="${source.dir}" destdir="${doc.dir}" />
 	</target>
+	
+	<property name="lint.script" value="${sdk.dir}/tools/lint"/>
+	<property name="lint.report" location="${reports.dir}/lintreport.html"/>
+	<property name="lint.project.loc" location="${source.dir}"/>
+ 
+	<target name="lint">
+	    <!-- lint -->
+	    <exec executable="${adb}">
+	    <arg value="${lint.script}"/>
+	    <arg value="--html"/>
+	    <arg value="${lint.report}"/>
+	    <arg value="${lint.project.loc}"/>
+	    </exec>
+	</target>
 
 </project>

@@ -110,6 +110,7 @@
 
     <import file="${sdk.dir}/tools/ant/build.xml" />
 
+    <!-- Pull the test results from the device -->
     <property
         name="test.runner"
         value="com.zutubi.android.junitreport.JUnitReportTestRunner" />
