@@ -92,7 +92,7 @@
 	<property name="lint.report" location="${reports.dir}/lint-report.html"/>
 	<target name="lint">
 	    <!-- lint -->
-	    <exec executable="${lint.script}"/>
+	    <exec executable="${lint.script}">
 	    <arg value="--html"/>
 	    <arg value="${lint.report}"/>
 	    <arg value="${source.dir}"/>
