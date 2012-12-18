@@ -89,7 +89,7 @@
 	</target>
 	
 	<property name="lint.script" value="${sdk.dir}/tools/lint"/>
-	<property name="lint.report" location="${reports.dir}/lintreport.html"/>
+	<property name="lint.report" location="${reports.dir}/lint-report.html"/>
 	<property name="lint.project.loc" location="${source.dir}"/>
  
 	<target name="lint">
