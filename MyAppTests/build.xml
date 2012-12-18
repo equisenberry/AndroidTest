@@ -111,7 +111,6 @@
     <import file="${sdk.dir}/tools/ant/build.xml" />
 
     <target name="run-tests">
-        <antcall target="debug install"/>
   		<antcall target="test"/>
   		<antcall target="fetch-test-report"/>
 	</target>
